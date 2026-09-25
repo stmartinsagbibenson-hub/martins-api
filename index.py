@@ -2,7 +2,7 @@ import requests
 
 
 try:
-    response = requests.get("http://127.0.0.1:8000/items/1")
+    response = requests.get("https://example.com")
 except Exception as e:
     print(f"Error: {e}")
 else:
