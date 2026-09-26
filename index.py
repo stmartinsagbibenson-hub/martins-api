@@ -22,3 +22,9 @@ else:
 def convert_dollar_naira(aid: float):
     ain = aid * 1500
     return ain
+
+
+
+def simple_interest_calculator(p: float, r: float, t: float):
+    si = p * r * t
+    return si

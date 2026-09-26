@@ -2,6 +2,8 @@ from fastapi import FastAPI
 
 from index import convert_dollar_naira
 
+from index import simple_interest_calculator
+
 app = FastAPI(docs_url="/docs")
 
 
@@ -17,8 +19,8 @@ def read_item(item_id: int, q: str | None = None):
 
 @app.post("/simple-interest-calculator")
 def simple_interest(p: float, r: float, t: int):
-  
-    return
+    si = simple_interest_calculator(p * r *t)
+    return si
 
 
 
