@@ -17,7 +17,7 @@ def read_item(item_id: int, q: str | None = None):
     return {"item_id": item_id, "q": q}
 
 
-@app.post("/simple-interest-calculator")
+@app.get("/simple-interest-calculator")
 def simple_interest(p: float, r: float, t: float):
     si = simple_interest_calculator(p * r *t)
     return si
