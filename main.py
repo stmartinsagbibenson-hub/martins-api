@@ -7,9 +7,6 @@ from index import simple_interest_calculator
 app = FastAPI(docs_url="/docs")
 
 
-
-
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}

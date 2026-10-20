@@ -58,7 +58,7 @@ Use `requests`, then plain loops, conditionals and dictionaries.
 3. How many employees are in each department? (Hint: a dictionary as a counter.)
 4. How many are Active, Exited, Candidate, or blank?
 5. What distinct roles exist? Which department has which roles?
-
+ 
 ### Core
 6. Which employees **exited**? Show their department and exit date.
 7. Which department has had the most exits? Which has had none?

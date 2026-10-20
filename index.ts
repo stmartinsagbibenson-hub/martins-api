@@ -1,1 +1,1 @@
-console.log("This is a typescript")
+console.log("This is a typescript") 
