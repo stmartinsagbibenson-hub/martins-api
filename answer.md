@@ -7,52 +7,52 @@ print("The id of staff in the sales department:")
              print("========")
 '''
 
-***Answer**
+# ***Answer**
 '''
 The id of staff in the sales department:
 EMP-3001
-========
-EMP-3006
-========
-EMP-3011
-========
-EMP-3016
-========
-EMP-3021
-========
-EMP-3026
-========
-EMP-3031
-========
-EMP-3036
-========
-EMP-3041
-========
-EMP-3046
-========
-EMP-3051
-========
-EMP-3056
-========
-EMP-3061
-========
-EMP-3066
-========
-EMP-3071
-========
-EMP-3076
-========
-EMP-3081
-========
-EMP-3086
-========
+
+# EMP-3006
+
+# EMP-3011
+
+# EMP-3016
+
+# EMP-3021
+
+# EMP-3026
+
+# EMP-3031
+
+# EMP-3036
+
+# EMP-3041
+
+# EMP-3046
+
+# EMP-3051
+
+# EMP-3056
+
+# EMP-3061
+
+# EMP-3066
+
+# EMP-3071
+
+# EMP-3076
+
+# EMP-3081
+
+# EMP-3086
+
 '''
 
-**How I got there:** 
-i used a for loop to iterate over the record in data,then in those records i searched for sales department and i used a print function to display the employee_id of employees in sales department.
+**How I got there:**   
+i used a for loop to iterate over the records in data,then in those records i searched for sales department and i used a print function to display the employee_id of employees in sales department.  
 '''
 
-**Q2. List all **Active** employees.**
+**Q2. List all Active employees.**
 '''python
 print()
     print("The id of all active staff:")
@@ -166,9 +166,12 @@ i used a for loop to iterate over the records in data, then used a conditional s
          else:
            department_count[department] = 1
 
-     print("Department counts:")
-     for department, count in department_count.items():
-         print(f"{department}: {count}")
+```
+ print("Department counts:")
+ for department, count in department_count.items():
+     print(f"{department}: {count}")
+```
+
 '''
 
 ***Answer**
@@ -187,7 +190,7 @@ So i created a dict named department_count and  a variable containing an empty s
 '''python
 employees_with_blanc_status = 0
 for record in data["records"]: 
-    if record["status"] == "":   
+    if record["status"] == "":  
         employees_with_blanc_status =  employees_with_blanc_status + 1
 print("sum of employees with blanc status is/are")
 print(employees_with_blanc_status)
@@ -219,7 +222,6 @@ print(candidates)
 **How I got there:** 
 i started by initializing counts for each status then i used the for loop to iterate over the record data and identified each employees status then saved each status and increased it based on how it occured in each eployees record. Then after getting total employees with different status then i added it together and displayed the sum.
 
-
 ***Q5.What distinct roles exist? Which department has which roles?**
 ''
     departmental_role = {}
@@ -236,11 +238,10 @@ i started by initializing counts for each status then i used the for loop to ite
 ***Answer**
 {'sales': {'associate'}, 'delivery': {'specialist', 'manager'}, 'people ops': {'specialist'}, 'engineering': {'analyst', 'lead'}, 'customer success': {'analyst'}}
 
-
 **How I got there:** 
 First i created a dict where i'll be saving the output. The looped through the records and created a variable for department and roles then used a conditional statement to check it the department is in the dict then if true then i used .add to add the role so it would be displayed together and if department has not be found or has no role, pick the department as key and add role to it as value.
 
-***Q6.Which employees **exited**? Show their department and exit date.**
+***Q6.Which employees exited? Show their department and exit date.**
 '''python
  for record in data["records"]:
         employee_id = record["employee_id"].lower().strip()
@@ -305,7 +306,7 @@ To Display the counts I printed each department and its total number of employee
 To Find the most exits I used highest_count and highest_department to save the department with the largest number of exits.
 To Find departments with no exits I checked the departments that have a count of 0 and prints their names.
 '''
-***Q8.For each employee with an offer, how many days between `application_date` and `offer_accepted_date`? Use `datetime`**
+***Q8.For each employee with an offer, how many days between** `application_date` **and** `offer_accepted_date`**? Use** `datetime`
 '''python
 
 '''
