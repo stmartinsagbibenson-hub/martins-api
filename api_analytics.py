@@ -1,6 +1,5 @@
 import requests
 from datetime import datetime
-from fastapi import FastAPI
 from fastapi import FastAPI, HTTPException 
 import os
 from dotenv import load_dotenv
@@ -13,22 +12,28 @@ if PEOPLE_OPS_URL is None:
         "PEOPLE_OPS_URL is not set. Check your .env file."
     )
 
-app = FastAPI()
-def fetch_people_ops():
-    try:
-        response = requests.get(
-            PEOPLE_OPS_URL,
-            timeout=10
-        )
-        response.raise_for_status()
-        return response.json()
+def make_request(url, method="GET"):
+    response = requests.request(
+        method=method,
+        url=url,
+        timeout=10
+    )
+    response.raise_for_status()
+    return response.json()
 
-    except requests.RequestException as e:
-        raise HTTPException(
-            status_code=502,
-            detail=f"People Ops API request failed: {e}"
-        )
-data = fetch_people_ops()
+
+def fetch_people_ops():
+   try:
+     return make_request(PEOPLE_OPS_URL)
+
+   except requests.RequestException as e:
+     raise HTTPException(
+         status_code=502,
+         detail=f"People Ops API request failed: {e}"
+     )
+
+data = make_request(PEOPLE_OPS_URL, "GET")
+
 print(type(data))
 
 print(type(data["records"]))
@@ -304,7 +309,7 @@ for record in invalid_records:
 
 
 
-
+ 
 app = FastAPI(docs_url="/docs")
 
 @app.get("/employees")
@@ -313,10 +318,9 @@ def get_employees():
     return data["records"]
 
 
-def get_active_employees():
-    data = fetch_people_ops()
+def get_active_employees(records):
     active_employees = []
-    for record in data["records"]:
+    for record in records:
         if record["status"] == "Active":
             active_employees.append(record)
     return active_employees
