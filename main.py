@@ -40,3 +40,12 @@ def currency_converter(amount_in_dollar: float):
         }
 
 
+
+
+
+
+
+
+
+
+
