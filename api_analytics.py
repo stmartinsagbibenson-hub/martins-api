@@ -313,7 +313,6 @@ def get_employees():
     return data["records"]
 
 
-@app.get("/employees/active")
 def get_active_employees():
     data = fetch_people_ops()
     active_employees = []
@@ -321,6 +320,11 @@ def get_active_employees():
         if record["status"] == "Active":
             active_employees.append(record)
     return active_employees
+    
+@app.get("/employees/active")
+def get_active_employees_endpoint():
+    data = fetch_people_ops()
+    return get_active_employees(data["records"])
 
 
 @app.get("/departments/{name}/employees")
