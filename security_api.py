@@ -34,7 +34,7 @@ message = (
     f"\nThe ip address you provided: {ip_address} has an ip version of {data["ipVersion"]} "
     f"\nand is connected to the domain {data["domain"]} "
     f"and the abuse confidence score is {data["abuseConfidenceScore"]}."
-     f"and the number of numDistinctUsers is {data["numDistinctUsers"]}."
+    f"\nand the number of numDistinctUsers is {data["numDistinctUsers"]}."
     f"and has a total report of {data["totalReports"]}."
 )
 with open("ip.txt", "w") as f:
