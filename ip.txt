@@ -1,3 +1,4 @@
 
 The ip address you provided: 172.22.64.2 has an ip version of 4 
 and is connected to the domain None and the abuse confidence score is 0.
+and the number of numDistinctUsers is 0.and has a total report of 0.
