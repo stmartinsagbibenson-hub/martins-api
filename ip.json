@@ -1,0 +1,18 @@
+{
+    "data": {
+        "ipAddress": "172.22.64.2",
+        "isPublic": false,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 0,
+        "countryCode": null,
+        "usageType": "Reserved",
+        "isp": null,
+        "domain": null,
+        "hostnames": [],
+        "isTor": false,
+        "totalReports": 0,
+        "numDistinctUsers": 0,
+        "lastReportedAt": null
+    }
+}
