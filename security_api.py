@@ -1,3 +1,5 @@
+# https://chatgpt.com/c/6ae1a4df-a2c8-83ea-aaa2-e9789b777962
+
 import requests
 import json
 import os
@@ -31,17 +33,11 @@ with open("ip.json", "w") as file:
 data = result["data"]
 
 message = (
-    f"\nThe ip address you provided: {ip_address} has an ip version of {data["ipVersion"]} "
-    f"\nand is connected to the domain {data["domain"]} "
-    f"and the abuse confidence score is {data["abuseConfidenceScore"]}."
-    f"\nand the number of numDistinctUsers is {data["numDistinctUsers"]}."
-    f"and has a total report of {data["totalReports"]}."
+    f"\nThe ip address you provided: {ip_address} has an ip version of {data['ipVersion']} "
+    f"\nand is connected to the domain {data['domain']} "
+    f"and the abuse confidence score is {data['abuseConfidenceScore']}."
+    f"\nand the number of numDistinctUsers is {data['numDistinctUsers']}."
+    f"and has a total report of {data['totalReports']}."
 )
 with open("ip.txt", "w") as f:
     f.write(message)
-
-
-
-
-
-
